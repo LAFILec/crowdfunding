@@ -1,8 +1,8 @@
 const CONFIG = {
     fundraising: {
-        goal: 10000,       
-        raised: 3500,    
-        donors: 27        
+        goal: 1000,         
+        raised: 3,       
+        donors: 2         
     }
 };
 
@@ -10,11 +10,30 @@ function animateProgress() {
     try {
         const progressBar = document.querySelector('.progress-fill');
         if (!progressBar) return;
+        const raisedElement = document.querySelector('.stat-card:first-child .stat-number');
+        const goalElement = document.querySelector('.stat-card:nth-child(2) .stat-number');
         
-        const percentage = Math.min((CONFIG.fundraising.raised / CONFIG.fundraising.goal) * 100, 100);
-        
+        let raised = CONFIG.fundraising.raised;
+        let goal = CONFIG.fundraising.goal;
+        if (raisedElement && goalElement) {
+            const raisedText = raisedElement.textContent.replace(/[$,]/g, '');
+            const goalText = goalElement.textContent.replace(/[$,]/g, '');
+            
+            const parsedRaised = parseFloat(raisedText);
+            const parsedGoal = parseFloat(goalText);
+            
+            if (!isNaN(parsedRaised) && !isNaN(parsedGoal)) {
+                raised = parsedRaised;
+                goal = parsedGoal;
+            }
+        }
+
+        let percentage = (raised / goal) * 100;
+        percentage = Math.max(percentage, 2); 
+        percentage = Math.min(percentage, 100); 
+
         let width = 0;
-        const increment = percentage / 80; 
+        const increment = percentage / 80;
         
         const interval = setInterval(() => {
             if (width >= percentage) {
@@ -25,6 +44,8 @@ function animateProgress() {
                 progressBar.style.width = width + '%';
             }
         }, 20);
+        
+        console.log(`📊 Progreso: ${raised}/${goal} (${percentage.toFixed(1)}%)`);
     } catch (error) {
         console.error('❌ Error en animación de progreso:', error);
     }
@@ -128,7 +149,7 @@ function addDonor(name, amount) {
             console.warn('⚠️ Lista de donadores no encontrada');
             return;
         }
-
+        
         const existingItems = donorList.querySelectorAll('.donor-item').length;
         const newRank = existingItems + 4; 
         const donorItem = document.createElement('div');
@@ -143,12 +164,13 @@ function addDonor(name, amount) {
         `;
         
         donorList.appendChild(donorItem);
+
         setTimeout(() => {
             donorItem.style.transition = 'all 0.5s ease';
             donorItem.style.opacity = '1';
             donorItem.style.transform = 'translateY(0)';
         }, 100);
-
+        
         CONFIG.fundraising.donors++;
         CONFIG.fundraising.raised += amount;
         updateDisplayStats();
@@ -168,7 +190,6 @@ function updateDisplayStats() {
             statNumbers[0].textContent = '$' + CONFIG.fundraising.raised.toLocaleString();
             statNumbers[2].textContent = CONFIG.fundraising.donors.toString();
         }
-
         const progressBar = document.querySelector('.progress-fill');
         if (progressBar) {
             const percentage = Math.min((CONFIG.fundraising.raised / CONFIG.fundraising.goal) * 100, 100);
@@ -185,30 +206,39 @@ function isMobile() {
 }
 
 function mobileOptimizations() {
-    if (isMobile()) {
-        try {
-            const interactiveElements = document.querySelectorAll('.stat-card, .podium-place, .donor-item');
+    try {
+        const screenWidth = window.innerWidth;
+        if (screenWidth <= 1024) {
+            const interactiveElements = document.querySelectorAll('.stat-card, .podium-place, .donor-item, .btn');
             
             interactiveElements.forEach(element => {
-                element.addEventListener('touchstart', function() {
-                    this.style.transform = 'scale(0.95)';
-                    this.style.transition = 'transform 0.1s ease';
-                }, { passive: true });
-                
-                element.addEventListener('touchend', function() {
-                    this.style.transform = 'scale(1)';
-                }, { passive: true });
+                element.removeEventListener('touchstart', handleTouchStart);
+                element.removeEventListener('touchend', handleTouchEnd);
+                element.addEventListener('touchstart', handleTouchStart, { passive: true });
+                element.addEventListener('touchend', handleTouchEnd, { passive: true });
             });
+        }
+
+        if (screenWidth <= 360) {
             const podiumSteps = document.querySelectorAll('.podium-step');
             podiumSteps.forEach(step => {
-                step.style.width = '90px';
-                step.style.padding = '15px 8px';
+                step.style.fontSize = '0.8rem';
             });
-
-        } catch (error) {
-            console.error('❌ Error en optimizaciones móviles:', error);
         }
+
+        console.log(`📱 Optimizaciones aplicadas para pantalla de ${screenWidth}px`);
+    } catch (error) {
+        console.error('❌ Error en optimizaciones móviles:', error);
     }
+}
+
+function handleTouchStart(e) {
+    this.style.transform = 'scale(0.95)';
+    this.style.transition = 'transform 0.1s ease';
+}
+
+function handleTouchEnd(e) {
+    this.style.transform = 'scale(1)';
 }
 
 function enableSmoothScroll() {
