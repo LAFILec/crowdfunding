@@ -3,35 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crowdfunding</title>
+    <title>LAFIL - Financiamiento Colectivo</title>
+    <link rel="icon" type="image/jpeg" href="lafil.jpg">
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Apoya al Coro LAFIL - Ensamble vocal y de cuerdas en su camino hacia presentaciones internacionales">
+    <meta property="og:title" content="LAFIL - Financiamiento Colectivo">
+    <meta property="og:description" content="Únete a nuestra misión musical: llevando la excelencia coral a escenarios internacionales">
+    <meta property="og:image" content="lafil.jpg">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="logo">
-                <img src="lafil.jpg" alt="Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 12px;"> 
+                <img src="lafil.jpg" alt="LAFIL Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;"> 
             </div>
-            <div class="nav-buttons">
+            <nav class="nav-buttons">
                 <a href="https://lafilec.github.io/LAFILec/" class="btn btn-return">
-                    ← Regresar
+                    ← Página Principal
                 </a>
                 <a href="https://www.instagram.com/lafil.ec/?igsh=MTc1MzY4MjdsYXZhYg%3D%3D" target="_blank" class="btn btn-instagram">
-                    📷 Instagram
+                    Instagram
                 </a>
-            </div>
+            </nav>
         </header>
 
         <main class="main-content">
-            <h1 class="campaign-title">Nuestro Proyecto</h1>
-            <p class="campaign-description">
-                Cada sueño comienza con un paso. Tu apoyo no solo nos ayuda a alcanzar nuestras metas, 
-                sino que también te convierte en parte de esta increíble historia. Juntos podemos 
-                hacer realidad algo extraordinario. Cada contribución, sin importar el tamaño, 
-                marca la diferencia y nos acerca más a cumplir este objetivo tan importante para nosotros.
-            </p>
+            <section class="hero-section">
+                <div class="hero-logo">
+                    <img src="LFn.png" alt="LAFIL" class="hero-logo-img">
+                </div>
+                <p class="campaign-subtitle">Vive la música</p>
+                <p class="campaign-description">
+                    Somos una agrupación musical que une la fuerza expresiva de las voces con la sutileza de las cuerdas.
+                    Nuestra esencia está en crear experiencias donde la excelencia artística trasciende 
+                    fronteras y el talento se convierte en algo mas grande.
+                </p>
+            </section>
 
-            <div class="progress-section">
+            <section class="mission-section">
+                <h2 class="section-title">Nuestra Visión</h2>
+                <div class="mission-grid">
+                    <div class="mission-item">
+                        <div class="mission-icon">🌍</div>
+                        <h3>Alcance Internacional</h3>
+                        <p>Participar en festivales y presentaciones de prestigio a nivel mundial</p>
+                    </div>
+                    <div class="mission-item">
+                        <div class="mission-icon">👔</div>
+                        <h3>Identidad Visual</h3>
+                        <p>Desarrollar un vestuario distintivo que refleje nuestra excelencia artística</p>
+                    </div>
+                    <div class="mission-item">
+                        <div class="mission-icon">🎵</div>
+                        <h3>Expansión Musical</h3>
+                        <p>Alcanzar nuevas audiencias y compartir nuestra pasión por la música coral</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="funding-breakdown">
+                <h2 class="section-title">Inversión Requerida</h2>
+                <div class="breakdown-grid">
+                    <div class="breakdown-item">
+                        <span class="breakdown-amount">$200</span>
+                        <span class="breakdown-desc">Vestuario profesional para ensamble completo</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-amount">$300</span>
+                        <span class="breakdown-desc">Equipamiento técnico y acústico</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-amount">$400</span>
+                        <span class="breakdown-desc">Participación en festivales internacionales</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="breakdown-amount">$100</span>
+                        <span class="breakdown-desc">Materiales musicales y promocionales</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="progress-section">
                 <div class="progress-stats">
                     <div class="stat-card">
                         <div class="stat-number">$3</div>
@@ -43,42 +95,57 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">2</div>
-                        <div class="stat-label">Donadores</div>
+                        <div class="stat-label">Colaboradores</div>
                     </div>
                 </div>
-            </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span>0.3% completado</span>
+                </div>
+            </section>
 
-            <!-- Payment Section -->
-            <div class="payment-section">
-                <h2 class="payment-title">¿Cómo puedes ayudar?</h2>
-                <div class="bank-account">
-                    <div class="qr-placeholder">
-                        <img src="PB.png" alt="Cuenta Bancaria" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+            <section class="support-section">
+                <h2 class="section-title">Cómo Colaborar</h2>
+                <div class="support-content">
+                    <div class="bank-info">
+                        <div class="qr-container">
+                            <img src="PB.png" alt="Información Bancaria" class="qr-image">
+                        </div>
+                        <div class="transfer-instructions">
+                            <h3>Proceso de Colaboración</h3>
+                            <ol>
+                                <li>Realiza tu transferencia utilizando los datos bancarios</li>
+                                <li>Envía el comprobante junto con tu nombre completo</li>
+                                <li>Serás incluido en nuestro registro de colaboradores</li>
+                                <li>Recibirás confirmación y reconocimiento público</li>
+                            </ol>
+                        </div>
                     </div>
-                    <div class="payment-instruction">
-                        📱 Envía tu comprobante y datos para registrar tu ayuda y subirte al podio de donadores
-                    </div>
-                    <div class="contact-buttons">
-                        <a href="https://wa.me/593998770378?text=Hola,%20envío%20mi%20comprobante%20de%20donación" 
+                    
+                    <div class="contact-methods">
+                        <a href="https://wa.me/593998770378?text=Comprobante%20de%20colaboración%20LAFIL" 
                            target="_blank" class="btn btn-whatsapp">
-                            💬 WhatsApp
+                            WhatsApp
                         </a>
-                        <a href="mailto:lafilec01@gmail.com?subject=Comprobante%20de%20Donación" 
+                        <a href="mailto:lafilec01@gmail.com?subject=Comprobante%20de%20Colaboración%20LAFIL" 
                            class="btn btn-email">
-                            ✉️ Correo
+                            Correo Electrónico
                         </a>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
 
-        <section class="leaderboard">
-            <h2 class="leaderboard-title">🏆 Podio de Héroes</h2>
+        <section class="recognition-section">
+            <h2 class="section-title">Top de Colaboradores</h2>
 
             <div class="podium">
                 <div class="podium-place podium-2">
                     <div class="podium-step">
-                        <div class="podium-number">2°</div>
+                        <div class="podium-rank">II</div>
                         <div class="podium-name">María González</div>
                         <div class="podium-amount">$1</div>
                     </div>
@@ -86,7 +153,7 @@
                 
                 <div class="podium-place podium-1">
                     <div class="podium-step">
-                        <div class="podium-number">1°</div>
+                        <div class="podium-rank">I</div>
                         <div class="podium-name">Carlos Rodríguez</div>
                         <div class="podium-amount">$2</div>
                     </div>
@@ -94,44 +161,40 @@
                 
                 <div class="podium-place podium-3">
                     <div class="podium-step">
-                        <div class="podium-number">3°</div>
-                        <div class="podium-name">En Espera</div>
+                        <div class="podium-rank">III</div>
+                        <div class="podium-name">Disponible</div>
                         <div class="podium-amount">$0</div>
                     </div>
                 </div>
             </div>
 
-            <div class="other-donors">
-                <h3 class="donors-subtitle">Otros Colaboradores</h3>
-                <div class="donor-list">
-                    <div class="donor-item">
-                        <span class="donor-rank">4°</span>
-                        <span class="donor-name">En Espera</span>
-                        <span class="donor-amount">$0</span>
+            <div class="contributors-list">
+                <h3 class="contributors-title">Registro de Colaboradores</h3>
+                <div class="contributor-items">
+                    <div class="contributor-item">
+                        <span class="contributor-rank">4</span>
+                        <span class="contributor-name">Disponible</span>
+                        <span class="contributor-amount">$0</span>
                     </div>
-                    <div class="donor-item">
-                        <span class="donor-rank">5°</span>
-                        <span class="donor-name">En Espera</span>
-                        <span class="donor-amount">$0</span>
+                    <div class="contributor-item">
+                        <span class="contributor-rank">5</span>
+                        <span class="contributor-name">Disponible</span>
+                        <span class="contributor-amount">$0</span>
                     </div>
-                    <div class="donor-item">
-                        <span class="donor-rank">6°</span>
-                        <span class="donor-name">En Espera</span>
-                        <span class="donor-amount">$0</span>
-                    </div>
-                    <div class="donor-item">
-                        <span class="donor-rank">7°</span>
-                        <span class="donor-name">En Espera</span>
-                        <span class="donor-amount">$0</span>
-                    </div>
-                    <div class="donor-item">
-                        <span class="donor-rank">8°</span>
-                        <span class="donor-name">En Espera</span>
-                        <span class="donor-amount">$0</span>
+                    <div class="contributor-item">
+                        <span class="contributor-rank">6</span>
+                        <span class="contributor-name">Disponible</span>
+                        <span class="contributor-amount">$0</span>
                     </div>
                 </div>
             </div>
         </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 LAFIL. TODOS LOS DERECHOS RESERVADOS.</p>
+            </div>
+        </footer>
     </div>
 
     <script src="script.js"></script>
