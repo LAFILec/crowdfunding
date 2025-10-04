@@ -3,41 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA FIL - crowdfunding</title>
+    <title>LAFIL - Financiamiento Colectivo</title>
     <link rel="icon" type="image/jpeg" href="lafil.jpg">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Apoya al Coro LAFIL - Ensamble vocal y de cuerdas en su camino hacia presentaciones internacionales">
-    <meta property="og:title" content="LAFIL - Financiamiento Colectivo">
-    <meta property="og:description" content="Únete a nuestra misión musical: llevando la excelencia coral a escenarios internacionales">
-    <meta property="og:image" content="lafil.jpg">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="logo">
-                <img src="lafil.jpg" alt="LAFIL Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;"> 
+                <img src="lafil.jpg" alt="LAFIL Logo"> 
             </div>
             <nav class="nav-buttons">
-                <a href="https://lafilec.github.io/LAFILec/" class="btn btn-return">
-                    ← Página Principal
-                </a>
-                <a href="https://www.instagram.com/lafil.ec/?igsh=MTc1MzY4MjdsYXZhYg%3D%3D" target="_blank" class="btn btn-instagram">
-                    Instagram
-                </a>
+                <a href="https://lafilec.github.io/LAFILec/" class="btn btn-return">Página Principal</a>
+                <a href="#support-section" class="btn btn-donate">Aportar</a>
+                <a href="https://www.instagram.com/lafil.ec/?igsh=MTc1MzY4MjdsYXZhYg%3D%3D" target="_blank" class="btn btn-instagram">Instagram</a>
             </nav>
         </header>
 
         <main class="main-content">
             <section class="hero-section">
-                <div class="hero-logo">
-                    <img src="LFn.png" alt="LAFIL" class="hero-logo-img">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="2024_1.jpg" alt="LAFIL">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="2024_F.jpg" alt="LAFIL">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="2025_1.jpg" alt="LAFIL">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="2025_2.jpg" alt="LAFIL">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="2025_3.jpg" alt="LAFIL">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="2025_4.jpg" alt="LAFIL">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="2025_5.jpg" alt="LAFIL">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="LFn.png" alt="LAFIL">
+                    </div>
                 </div>
+
                 <p class="campaign-subtitle">Vive la música</p>
                 <p class="campaign-description">
                     Somos una agrupación musical que une la fuerza expresiva de las voces con la sutileza de las cuerdas.
                     Nuestra esencia está en crear experiencias donde la excelencia artística trasciende 
                     fronteras y el talento se convierte en algo mas grande.
                 </p>
+            </section>
+
+            <section class="about-section">
+                <h2 class="section-title">Quiénes Somos</h2>
+                <div class="about-content">
+                    <p>LAFIL es un ensamble vocal y de cuerdas comprometido con la excelencia musical. Desde nuestros inicios, hemos trabajado incansablemente para perfeccionar nuestra técnica y crear interpretaciones que conecten emocionalmente con nuestras audiencias.</p>
+                    <p>Nuestro repertorio abarca desde obras clásicas hasta composiciones contemporáneas, siempre buscando transmitir la pasión y dedicación que define nuestra identidad artística.</p>
+                </div>
             </section>
 
             <section class="mission-section">
@@ -57,6 +83,40 @@
                         <div class="mission-icon">🎵</div>
                         <h3>Expansión Musical</h3>
                         <p>Alcanzar nuevas audiencias y compartir nuestra pasión por la música coral</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="timeline-section">
+                <h2 class="section-title">Cronograma de Metas</h2>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">$250</div>
+                        <div class="timeline-content">
+                            <h3>Primera Etapa</h3>
+                            <p>Adquisición de vestuario básico para presentaciones locales</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">$500</div>
+                        <div class="timeline-content">
+                            <h3>Segunda Etapa</h3>
+                            <p>Vestuario completo y equipamiento acústico esencial</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">$750</div>
+                        <div class="timeline-content">
+                            <h3>Tercera Etapa</h3>
+                            <p>Equipamiento técnico avanzado y material promocional</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">$1000</div>
+                        <div class="timeline-content">
+                            <h3>Meta Final</h3>
+                            <p>Participación confirmada en festival internacional</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -107,7 +167,7 @@
                 </div>
             </section>
 
-            <section class="support-section">
+            <section class="support-section" id="support-section">
                 <h2 class="section-title">Cómo Colaborar</h2>
                 <div class="support-content">
                     <div class="bank-info">
@@ -126,14 +186,8 @@
                     </div>
                     
                     <div class="contact-methods">
-                        <a href="https://wa.me/593998770378?text=Comprobante%20de%20colaboración%20LAFIL" 
-                           target="_blank" class="btn btn-whatsapp">
-                            WhatsApp
-                        </a>
-                        <a href="mailto:lafilec01@gmail.com?subject=Comprobante%20de%20Colaboración%20LAFIL" 
-                           class="btn btn-email">
-                            Correo Electrónico
-                        </a>
+                        <a href="https://wa.me/593998770378?text=Comprobante%20de%20colaboración%20LAFIL" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+                        <a href="mailto:lafilec01@gmail.com?subject=Comprobante%20de%20Colaboración%20LAFIL" class="btn btn-email">Correo Electrónico</a>
                     </div>
                 </div>
             </section>
@@ -143,7 +197,7 @@
             <h2 class="section-title">Top de Colaboradores</h2>
 
             <div class="podium">
-                <div class="podium-place podium-2">
+                <div class="podium-place second">
                     <div class="podium-step">
                         <div class="podium-rank">II</div>
                         <div class="podium-name">María González</div>
@@ -151,7 +205,7 @@
                     </div>
                 </div>
                 
-                <div class="podium-place podium-1">
+                <div class="podium-place first">
                     <div class="podium-step">
                         <div class="podium-rank">I</div>
                         <div class="podium-name">Carlos Rodríguez</div>
@@ -159,7 +213,7 @@
                     </div>
                 </div>
                 
-                <div class="podium-place podium-3">
+                <div class="podium-place third">
                     <div class="podium-step">
                         <div class="podium-rank">III</div>
                         <div class="podium-name">Disponible</div>
@@ -200,4 +254,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
